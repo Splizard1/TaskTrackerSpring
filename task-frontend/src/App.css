@@ -1,0 +1,201 @@
+/* Full-screen wrapper */
+.app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Card container */
+.app-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.app-wrapper.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.app-wrapper.dark .app-card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Dark mode overrides */
+.app-wrapper.dark .theme-toggle button {
+    background-color: #7c3aed;
+    color: white;
+}
+
+.app-wrapper.dark .theme-toggle button:hover {
+    background-color: #5b21b6;
+}
+
+/* Light mode styles */
+.app-wrapper.light {
+    background-color: #f0f2f5;
+    color: #111;
+}
+
+.app-wrapper.light .app-card {
+    background-color: #ffffff;
+    color: #111;
+}
+
+/* Theme toggle button container */
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end; /* right side */
+    margin-bottom: 20px; /* space from title/form */
+}
+
+.theme-toggle button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.25s;
+}
+
+.theme-toggle button:hover {
+    background-color: #3730a3;
+}
+
+/* Page title */
+.app-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.task-form input,
+.task-form select,
+.task-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Row for selects */
+.select-row {
+    display: flex;
+    gap: 10px;
+}
+
+.select-row select {
+    flex: 1;
+}
+
+/* Submit button */
+.task-form button {
+    font-weight: bold;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background-color: #3730a3;
+}
+
+/* Task list */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+}
+
+.app-wrapper.dark .task-item {
+    background-color: #2a2a2a;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.task-desc {
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.app-wrapper.dark .task-desc {
+    color: #ccc;
+}
+
+.task-due {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.app-wrapper.dark .task-due {
+    color: #aaa;
+}
+
+/* Delete button */
+.delete-btn {
+    margin-top: 6px;
+    padding: 6px 10px;
+    font-size: 0.9em;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+.task-item input,
+.task-item select {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.app-wrapper.dark .task-item input,
+.app-wrapper.dark .task-item select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
